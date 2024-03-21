@@ -13,23 +13,49 @@
 </head>
 <body>
     <header>
-        <h1>ELTO BORGES</h1>
-        <nav class="button-top">
-            <h3><a href="#portfolio"><button class="top"><i class="bi bi-code"></i></button></a></h3>
-            <h3><a href="#gym"><button class="top"><i class="fa-solid fa-dumbbell"></i></button></a></h3>
-            <h3><a href="#livros"><button class="top"><i class="bi bi-book"></i></button></a></h3>
-            <h3><a href="#filmes"><button class="top"><i class="bi bi-camera-reels"></i></button></a></h3>
+        <nav id="navbar">
+            <h1 id="nav_logo"> <a href="">ELTO BORGES</a> </h1>
+
+            <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="#inicio">Início</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#hobbies">hobbies</a>
+                </li>
+            </ul>
+
+            <button id="mobile_btn" aria-label="Icone de Três barrinhas - menu hamburguer ">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#inicio">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#hobbies">hobbies</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
-        <section class="topo-do-site">
+        <section class="topo-do-site" id="inicio">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
                         <h1>MEU NOME É ELTO BORGES E ESTE SITE É UM DOS MEUS <span>PROJETOS.</span></h1>
                         <p>Apaixonado por tecnologia, academia, café e filosofia. Este sou eu! Estou tentando aumentar meu portfólio de projetos práticos e este será o site inicial que servirá como vitrine.</p>
                         <hr>
-                        <h2>>MEUS <span>HOBBIES</span></h2>
+                        <h2 id="hobbies">>MEUS <span>HOBBIES</span></h2>
                         <div class="btn-social">
                             <a href="#portfolio"><button><i class="bi bi-code"></i></button></a>
                             <a href="#gym"><button><i class="fa-solid fa-dumbbell"></i></button></a>
@@ -44,7 +70,7 @@
                 </div>
             </div>
         </section>
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="interface">
                 <div class="flex">
                     
@@ -234,5 +260,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

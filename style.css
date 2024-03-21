@@ -67,41 +67,53 @@ form .btn-enviar input:hover {
 
 /* ESTILO DO CABEÇALHO */
 header {
-    padding: 20px 1%;
+    width: 100%;
+    padding: 28px 8%;
+    position: sticky;
+    top: 0;
     background-color: #7f5af0;
+    box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+
+#navbar {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-height: 80px;
-    
+    justify-content: space-between;
 }
-header h1{
-    filter: drop-shadow(0 0 25px #fff);
-    font-size: 3em;
+
+#nav_logo {
+    font-size: 24px;
+    color: #02111B;
 }
-header h3 {
+#nav_logo a {
     color: #fff;
-    margin: 0 10px;
+}
+
+#nav_list {
     display: flex;
-    flex-direction: row;
+    list-style: none;
+    gap: 48px;
 }
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
 }
-.top {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    background-color: #fff;
-    font-size: 22px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: .2s;
-}
+.nav-item a:hover{
+    color: #fff;
+  }
+  
+  #mobile_btn {
+      display: none;
+  }
+  
+  #mobile_menu {
+      display: none;
+  }
 
 
 /* ESTILO DO TOPO DO SITE */
@@ -447,6 +459,35 @@ footer .line-footer p a {
 }
 
 @media screen and (max-width: 1020px) {
+    #nav_list {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+    
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    } 
     .days {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -467,12 +508,8 @@ footer .line-footer p a {
 }
 
 @media screen and (max-width: 600px) {
-    
     header{
         max-width: 600px;
-    }
-    header h1{
-        padding-left: 15px;
     }
     header nav{
         display: none;
