@@ -69,11 +69,12 @@ form .btn-enviar input:hover {
 header {
     width: 100%;
     padding: 28px 8%;
-    position: sticky;
+    position: relative;
     top: 0;
     background-color: #7f5af0;
     box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.1);
     z-index: 10;
+
 }
 
 
@@ -89,7 +90,7 @@ header {
     color: #02111B;
 }
 #nav_logo a {
-    color: #fff;
+    color: black;
 }
 
 #nav_list {
