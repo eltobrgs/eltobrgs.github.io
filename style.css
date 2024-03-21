@@ -419,6 +419,12 @@ footer .line-footer p a {
     .categorias img {
         margin: 0 25%;
     }
+    .obras {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .obras img {
+        margin: 0 25%;}
 }
 
 @media screen and (max-width: 600px) {
