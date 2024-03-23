@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
     mobileBtn.addEventListener('click', function () {
         var mobileMenu = document.getElementById('mobile_menu');
         
-        // Alternaando a classe 'active' do menu
+        // Alterna a classe 'active' do menu
         mobileMenu.classList.toggle('active');
+        
+        // Alterna a rotação do ícone do botão
         var icon = mobileBtn.querySelector('i');
         if (icon) {
-            icon.classList.toggle('fa-x');
+            icon.style.transform = icon.style.transform === 'rotate(90deg)' ? 'rotate(0deg)' : 'rotate(90deg)';
         }
     });
 });
