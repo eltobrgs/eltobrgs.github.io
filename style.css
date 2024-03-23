@@ -379,6 +379,22 @@ footer .line-footer p a {
     filter: drop-shadow(0 0 10px #7f5af0);
 }
 
+/*VOLTA*/
+.btn-volta button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #7f5af0;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+
+}
+
+/* RESPONSIVIDADE */
+
 @media screen and (max-width: 1020px) {
     /* CLASSES GERAIS */
     .flex {
