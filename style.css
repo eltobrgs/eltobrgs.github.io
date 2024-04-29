@@ -37,6 +37,12 @@ p {
 .flex {
     display: flex;
 }
+.flexport {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
 
 .btn-contato button {
     padding: 10px 40px;
@@ -67,7 +73,10 @@ form .btn-enviar input:hover {
 
 /* ESTILO DO CABEÇALHO */
 header {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 12px;
     padding: 28px 8%;
     position: relative;
     top: 0;
@@ -257,6 +266,7 @@ section.portfolio .flex {
     color: #fff;
     opacity: 0;
     transition: .5s;
+    
 }
 
 .overlay:hover {
