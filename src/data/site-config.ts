@@ -50,14 +50,13 @@ export const siteConfig = {
       name: "UGym Fitness App",
       description: "Aplicativo de fitness completo (React, TypeScript) para Alunos, Personal Trainers e Academias. Backend com Prisma, Express, políticas de segurança, hash de senha e token JWT.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Prisma", "Express", "Node.js", "JWT"],
-      // repoUrl: undefined, // Sem repositório principal direto no card
       liveUrl: "https://ugym-react.vercel.app",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "fitness app"
     },
     {
       name: "RFSmart Platform",
-      description: "Plataforma de cursos online com frontend moderno (React, TypeScript, Vite) e backend robusto (Node.js, Express, Prisma).",
+      description: "Plataforma de cursos online com frontend moderno (React, TypeScript, Vite) e backend robusto (Node.js, Express, Prisma). Repositórios: Frontend - https://github.com/eltobrgs/FrontEnd-RFSmartReact, Backend - https://github.com/eltobrgs/BackEnd-RFSmart.",
       technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router DOM", "Framer Motion", "Node.js", "Express", "Prisma", "JWT"],
       frontendRepoUrl: "https://github.com/eltobrgs/FrontEnd-RFSmartReact",
       backendRepoUrl: "https://github.com/eltobrgs/BackEnd-RFSmart",
@@ -68,7 +67,7 @@ export const siteConfig = {
     {
       name: "UGym Landing Page",
       description: "Landing page promocional para o aplicativo UGym, construída com foco em design responsivo e otimizada para conversão.",
-      technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      technologies: ["Next.js", "Tailwind CSS"],
       repoUrl: "https://github.com/eltobrgs/LandingPageUgym",
       liveUrl: "https://eltobrgs.github.io/LandingPageUgym/",
       imageUrl: "https://placehold.co/600x400.png",
@@ -89,10 +88,9 @@ export const siteConfig = {
       technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "JWT", "Framer Motion"],
       frontendRepoUrl: "https://github.com/eltobrgs/FrontEnd-MedicSystem",
       backendRepoUrl: "https://github.com/eltobrgs/BackEnd-MedicSystem",
-      // liveUrl: "COLOQUE O LINK DO PROJETO ONLINE AQUI, SE HOUVER",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "clinic management app",
-      isCollection: true, // Mantém o modal para detalhes dos sub-itens
+      isCollection: true,
       collectionTitle: "Repositórios e Componentes do MedicSystem",
       collectionItems: [
         {
@@ -106,7 +104,7 @@ export const siteConfig = {
           repoUrl: "https://github.com/eltobrgs/BackEnd-MedicSystem"
         }
       ],
-      collectionSeeMoreText: "Explore os componentes frontend e backend do MedicSystem ou acesse os repositórios principais pelos botões no card."
+      collectionSeeMoreText: "Explore os componentes frontend e backend do MedicSystem."
     }
   ] as Project[],
   contactLinks: [
