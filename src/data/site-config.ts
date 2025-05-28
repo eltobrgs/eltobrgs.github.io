@@ -105,6 +105,15 @@ export const siteConfig = {
         }
       ],
       collectionSeeMoreText: "Explore os componentes frontend e backend do MedicSystem."
+    },
+    {
+      name: "Explorador Interativo do Sistema Digestivo",
+      description: "Projeto educativo sobre o sistema digestivo, incluindo quiz interativo e esquema 3D. Desenvolvido com Next.js, TypeScript e Tailwind CSS para um trabalho escolar.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+      liveUrl: "https://eltobrgs.github.io/SistemaDigestivoInterativo/",
+      imageUrl: "https://placehold.co/600x400.png",
+      imageHint: "digestive system anatomy",
+      isCollection: false,
     }
   ] as Project[],
   contactLinks: [
