@@ -1,6 +1,12 @@
 
 import type { LucideIcon } from 'lucide-react';
 
+export interface ProjectCollectionItem {
+  name: string;
+  description?: string;
+  repoUrl?: string; // Link para o sub-projeto/diretório específico, se aplicável
+}
+
 export interface Project {
   name: string;
   description: string;
@@ -9,6 +15,12 @@ export interface Project {
   liveUrl?: string;
   imageUrl: string;
   imageHint?: string;
+
+  // Para coleções de projetos que abrem um modal
+  isCollection?: boolean;
+  collectionTitle?: string;
+  collectionItems?: ProjectCollectionItem[];
+  collectionSeeMoreText?: string;
 }
 
 export interface TechCategory {
