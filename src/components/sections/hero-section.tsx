@@ -27,7 +27,7 @@ export default function HeroSection() {
               alt="Elto Borges"
               width={300}
               height={300}
-              className="rounded-full shadow-lg border-4 border-primary"
+              className="rounded-lg shadow-lg border-4 border-primary"
               data-ai-hint="profile picture"
             />
           </motion.div>
