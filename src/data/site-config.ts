@@ -50,17 +50,18 @@ export const siteConfig = {
       name: "UGym Fitness App",
       description: "Aplicativo de fitness completo (React, TypeScript) para Alunos, Personal Trainers e Academias. Backend com Prisma, Express, políticas de segurança, hash de senha e token JWT.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Prisma", "Express", "Node.js", "JWT"],
-      // repoUrl: undefined, // Removido conforme solicitado
+      // repoUrl: undefined, // Sem repositório principal direto no card
       liveUrl: "https://ugym-react.vercel.app",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "fitness app"
     },
     {
       name: "RFSmart Platform",
-      description: "Plataforma de cursos online com frontend moderno (React, TypeScript, Vite) e backend robusto (Node.js, Express, Prisma). Repositório Frontend: https://github.com/eltobrgs/FrontEnd-RFSmartReact. Repositório Backend: https://github.com/eltobrgs/BackEnd-RFSmart.",
+      description: "Plataforma de cursos online com frontend moderno (React, TypeScript, Vite) e backend robusto (Node.js, Express, Prisma).",
       technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router DOM", "Framer Motion", "Node.js", "Express", "Prisma", "JWT"],
-      repoUrl: "https://github.com/eltobrgs/FrontEnd-RFSmartReact", 
-      liveUrl: "https://front-end-rf-smart-react.vercel.app", // Confirme se este é o link correto do live
+      frontendRepoUrl: "https://github.com/eltobrgs/FrontEnd-RFSmartReact",
+      backendRepoUrl: "https://github.com/eltobrgs/BackEnd-RFSmart",
+      liveUrl: "https://front-end-rf-smart-react.vercel.app",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "e-learning platform"
     },
@@ -86,25 +87,26 @@ export const siteConfig = {
       name: "MedicSystem - Gerenciador de Clínica",
       description: "Gerenciador de clínica médica que organiza documentos, cadastra médicos/pacientes e agenda consultas. Frontend (React, TS) e Backend (Node.js, Prisma).",
       technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "JWT", "Framer Motion"],
-      repoUrl: "https://github.com/eltobrgs/FrontEnd-MedicSystem", // Link principal do card
+      frontendRepoUrl: "https://github.com/eltobrgs/FrontEnd-MedicSystem",
+      backendRepoUrl: "https://github.com/eltobrgs/BackEnd-MedicSystem",
       // liveUrl: "COLOQUE O LINK DO PROJETO ONLINE AQUI, SE HOUVER",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "clinic management app",
-      isCollection: true,
-      collectionTitle: "Repositórios do MedicSystem",
+      isCollection: true, // Mantém o modal para detalhes dos sub-itens
+      collectionTitle: "Repositórios e Componentes do MedicSystem",
       collectionItems: [
-        { 
-          name: "Frontend (React, TypeScript)", 
+        {
+          name: "Frontend (React, TypeScript)",
           description: "Interface do usuário para o MedicSystem, desenvolvida com React, TypeScript e Vite.",
-          repoUrl: "https://github.com/eltobrgs/FrontEnd-MedicSystem" 
+          repoUrl: "https://github.com/eltobrgs/FrontEnd-MedicSystem"
         },
-        { 
-          name: "Backend (Node.js, Prisma)", 
+        {
+          name: "Backend (Node.js, Prisma)",
           description: "API RESTful e lógica de negócios para o MedicSystem, utilizando Node.js, Express e Prisma.",
-          repoUrl: "https://github.com/eltobrgs/BackEnd-MedicSystem" 
+          repoUrl: "https://github.com/eltobrgs/BackEnd-MedicSystem"
         }
       ],
-      collectionSeeMoreText: "Explore os repositórios frontend e backend do MedicSystem."
+      collectionSeeMoreText: "Explore os componentes frontend e backend do MedicSystem ou acesse os repositórios principais pelos botões no card."
     }
   ] as Project[],
   contactLinks: [
@@ -116,7 +118,7 @@ export const siteConfig = {
     {
       name: "WhatsApp",
       url: "https://wa.link/w6d9rf",
-      icon: "MessageSquareText" // Alterado de Smartphone para MessageSquareText que é mais genérico para WhatsApp
+      icon: "MessageSquareText"
     },
     {
       name: "Instagram",

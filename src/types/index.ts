@@ -11,7 +11,9 @@ export interface Project {
   name: string;
   description: string;
   technologies: string[];
-  repoUrl: string;
+  repoUrl?: string; // Link para o repositório principal, se houver apenas um ou como fallback
+  frontendRepoUrl?: string; // Link para o repositório frontend, se aplicável
+  backendRepoUrl?: string; // Link para o repositório backend, se aplicável
   liveUrl?: string;
   imageUrl: string;
   imageHint?: string;
