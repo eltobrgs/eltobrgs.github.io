@@ -50,7 +50,7 @@ export const siteConfig = {
       name: "UGym Fitness App",
       description: "Aplicativo de fitness completo (React, TypeScript) para Alunos, Personal Trainers e Academias. Backend com Prisma, Express, políticas de segurança, hash de senha e token JWT.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Prisma", "Express", "Node.js", "JWT"],
-      repoUrl: "https://github.com/eltobrgs/ugym-react", // Por favor, verifique se este é o link correto do repositório
+      repoUrl: "https://github.com/eltobrgs/ugym-react", 
       liveUrl: "https://ugym-react.vercel.app",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "fitness app"
@@ -59,7 +59,7 @@ export const siteConfig = {
       name: "RFSmart Platform Frontend",
       description: "Aplicação web moderna (React 19, TypeScript, Vite) para a plataforma de cursos online RFSmart. Backend robusto com tecnologias similares ao UGym.",
       technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router DOM", "Framer Motion"],
-      repoUrl: "https://github.com/eltobrgs/RFSmart-FrontEnd", // Por favor, verifique se este é o link correto do repositório
+      repoUrl: "https://github.com/eltobrgs/RFSmart-FrontEnd", 
       liveUrl: "https://front-end-rf-smart-react.vercel.app",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "e-learning dashboard"
@@ -74,22 +74,13 @@ export const siteConfig = {
       imageHint: "website landing page"
     },
     {
-      name: "Coleção de Projetos Spring Boot",
-      description: "Repositório agregando diversos projetos iniciais e exemplos práticos desenvolvidos com Spring Boot e Java, demonstrando diferentes funcionalidades do framework.",
-      technologies: ["Java", "Spring Boot", "Maven", "Spring MVC", "Spring Data JPA", "Spring Security"],
-      repoUrl: "https://github.com/eltobrgs/springboot-starter-projects",
+      name: "Sistema de Gerenciamento de Biblioteca",
+      description: "Sistema de gerenciamento de biblioteca com frontend em HTML, Bootstrap CSS, e backend com Spring Boot, conectado ao banco de dados MongoDB.",
+      technologies: ["Java", "Spring Boot", "MongoDB", "Thymeleaf", "HTML", "Bootstrap CSS", "Maven"],
+      repoUrl: "https://github.com/eltobrgs/sistema-biblioteca-springboot", // Por favor, verifique/ajuste este link
+      // liveUrl: "COLOQUE O LINK DO PROJETO ONLINE AQUI, SE HOUVER", // Descomente e adicione se tiver um link online
       imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "java code API",
-      isCollection: true,
-      collectionTitle: "Projetos Exemplo com Spring Boot",
-      collectionItems: [
-        { name: "API RESTful Básica", description: "Estrutura fundamental para uma API REST, incluindo controllers, services e exemplos de endpoints CRUD. Ideal para iniciar o desenvolvimento de backends." },
-        { name: "Aplicação Web com Spring MVC e Thymeleaf", description: "Demonstração de como construir aplicações web tradicionais com renderização no lado do servidor, utilizando Spring MVC para o backend e Thymeleaf para as views." },
-        { name: "Segurança com Spring Security", description: "Implementação de mecanismos de autenticação e autorização, protegendo endpoints e recursos da aplicação contra acesso não autorizado." },
-        { name: "Acesso a Dados com Spring Data JPA", description: "Exemplo de integração com bancos de dados relacionais (como H2, PostgreSQL) utilizando Spring Data JPA e Hibernate para facilitar a persistência de dados." },
-        { name: "Microsserviço com Spring Cloud (Conceitual)", description: "Abordagem conceitual para desenvolvimento de microsserviços, podendo incluir service discovery (Eureka/Consul), configuration server, e API Gateway." }
-      ],
-      collectionSeeMoreText: "Os itens acima são exemplos ilustrativos. Explore o repositório principal no GitHub para ver todos os projetos, códigos-fonte e documentações detalhadas."
+      imageHint: "library management"
     }
   ] as Project[],
   contactLinks: [
@@ -101,7 +92,7 @@ export const siteConfig = {
     {
       name: "WhatsApp",
       url: "https://wa.link/w6d9rf",
-      icon: "MessageSquareText" // Changed from MessageSquare for better representation
+      icon: "MessageSquareText"
     },
     {
       name: "Instagram",
