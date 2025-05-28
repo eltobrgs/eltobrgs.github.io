@@ -50,19 +50,19 @@ export const siteConfig = {
       name: "UGym Fitness App",
       description: "Aplicativo de fitness completo (React, TypeScript) para Alunos, Personal Trainers e Academias. Backend com Prisma, Express, políticas de segurança, hash de senha e token JWT.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Prisma", "Express", "Node.js", "JWT"],
-      repoUrl: "https://github.com/eltobrgs/ugym-react", 
+      // repoUrl: undefined, // Removido conforme solicitado
       liveUrl: "https://ugym-react.vercel.app",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "fitness app"
     },
     {
-      name: "RFSmart Platform Frontend",
-      description: "Aplicação web moderna (React 19, TypeScript, Vite) para a plataforma de cursos online RFSmart. Backend robusto com tecnologias similares ao UGym.",
-      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router DOM", "Framer Motion"],
-      repoUrl: "https://github.com/eltobrgs/RFSmart-FrontEnd", 
-      liveUrl: "https://front-end-rf-smart-react.vercel.app",
+      name: "RFSmart Platform",
+      description: "Plataforma de cursos online com frontend moderno (React, TypeScript, Vite) e backend robusto (Node.js, Express, Prisma). Repositório Frontend: https://github.com/eltobrgs/FrontEnd-RFSmartReact. Repositório Backend: https://github.com/eltobrgs/BackEnd-RFSmart.",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router DOM", "Framer Motion", "Node.js", "Express", "Prisma", "JWT"],
+      repoUrl: "https://github.com/eltobrgs/FrontEnd-RFSmartReact", 
+      liveUrl: "https://front-end-rf-smart-react.vercel.app", // Confirme se este é o link correto do live
       imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "e-learning dashboard"
+      imageHint: "e-learning platform"
     },
     {
       name: "UGym Landing Page",
@@ -77,10 +77,34 @@ export const siteConfig = {
       name: "Sistema de Gerenciamento de Biblioteca",
       description: "Sistema de gerenciamento de biblioteca com frontend em HTML, Bootstrap CSS, e backend com Spring Boot, conectado ao banco de dados MongoDB.",
       technologies: ["Java", "Spring Boot", "MongoDB", "Thymeleaf", "HTML", "Bootstrap CSS", "Maven"],
-      repoUrl: "https://github.com/eltobrgs/sistema-biblioteca-springboot", // Por favor, verifique/ajuste este link
-      // liveUrl: "COLOQUE O LINK DO PROJETO ONLINE AQUI, SE HOUVER", // Descomente e adicione se tiver um link online
+      repoUrl: "https://github.com/eltobrgs/SpringBoot-sistemabiblioteca",
       imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "library management"
+      imageHint: "library management system",
+      isCollection: false,
+    },
+    {
+      name: "MedicSystem - Gerenciador de Clínica",
+      description: "Gerenciador de clínica médica que organiza documentos, cadastra médicos/pacientes e agenda consultas. Frontend (React, TS) e Backend (Node.js, Prisma).",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "JWT", "Framer Motion"],
+      repoUrl: "https://github.com/eltobrgs/FrontEnd-MedicSystem", // Link principal do card
+      // liveUrl: "COLOQUE O LINK DO PROJETO ONLINE AQUI, SE HOUVER",
+      imageUrl: "https://placehold.co/600x400.png",
+      imageHint: "clinic management app",
+      isCollection: true,
+      collectionTitle: "Repositórios do MedicSystem",
+      collectionItems: [
+        { 
+          name: "Frontend (React, TypeScript)", 
+          description: "Interface do usuário para o MedicSystem, desenvolvida com React, TypeScript e Vite.",
+          repoUrl: "https://github.com/eltobrgs/FrontEnd-MedicSystem" 
+        },
+        { 
+          name: "Backend (Node.js, Prisma)", 
+          description: "API RESTful e lógica de negócios para o MedicSystem, utilizando Node.js, Express e Prisma.",
+          repoUrl: "https://github.com/eltobrgs/BackEnd-MedicSystem" 
+        }
+      ],
+      collectionSeeMoreText: "Explore os repositórios frontend e backend do MedicSystem."
     }
   ] as Project[],
   contactLinks: [
@@ -92,7 +116,7 @@ export const siteConfig = {
     {
       name: "WhatsApp",
       url: "https://wa.link/w6d9rf",
-      icon: "MessageSquareText"
+      icon: "MessageSquareText" // Alterado de Smartphone para MessageSquareText que é mais genérico para WhatsApp
     },
     {
       name: "Instagram",

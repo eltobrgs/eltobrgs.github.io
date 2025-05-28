@@ -7,10 +7,10 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Layers } from 'lucide-react'; // Added Layers for "Ver Detalhes"
+import { Github, ExternalLink, Layers } from 'lucide-react';
 import type { Project } from '@/types';
-import ProjectDetailsModal from './project-details-modal'; // New import
-import { useState } from 'react'; // New import
+import ProjectDetailsModal from './project-details-modal';
+import { useState } from 'react';
 
 interface ProjectCardProps {
   project: Project;
@@ -29,7 +29,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   const cardContent = (
     <Card 
       className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-      onClick={project.isCollection ? handleOpenModal : undefined} // Make card clickable for collections
+      onClick={project.isCollection ? handleOpenModal : undefined}
       role={project.isCollection ? "button" : undefined}
       tabIndex={project.isCollection ? 0 : undefined}
       onKeyDown={project.isCollection ? (e) => (e.key === 'Enter' || e.key === ' ') && handleOpenModal() : undefined}
@@ -67,13 +67,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       </CardContent>
       <CardFooter className="mt-auto grid grid-cols-2 gap-2">
-        <Link href={project.repoUrl} passHref legacyBehavior>
-          <a target="_blank" rel="noopener noreferrer" className="w-full" onClick={(e) => e.stopPropagation()}>
-            <Button variant="outline" className="w-full">
-              <Github className="mr-2 h-4 w-4" /> Ver Repositório
-            </Button>
-          </a>
-        </Link>
+        {project.repoUrl ? (
+          <Link href={project.repoUrl} passHref legacyBehavior>
+            <a target="_blank" rel="noopener noreferrer" className="w-full" onClick={(e) => e.stopPropagation()}>
+              <Button variant="outline" className="w-full">
+                <Github className="mr-2 h-4 w-4" /> Ver Repositório
+              </Button>
+            </a>
+          </Link>
+        ) : (
+          <Button variant="outline" className="w-full" disabled>
+            <Github className="mr-2 h-4 w-4" /> Sem Repositório
+          </Button>
+        )}
         {project.isCollection ? (
           <Button className="w-full" onClick={(e) => { e.stopPropagation(); handleOpenModal(); }}>
             <Layers className="mr-2 h-4 w-4" /> Ver Detalhes
