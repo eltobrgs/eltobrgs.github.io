@@ -8,11 +8,11 @@ export const siteConfig = {
   description: "Portfólio de Elto Borges, Desenvolvedor Full Stack.",
   links: {
     github: "https://github.com/eltobrgs",
-    linkedin: "https://www.linkedin.com/in/elto-borges-5b90962a8/",
-    instagram: "https://instagram.com/eltobrgs",
-    youtube: "https://www.youtube.com/channel/UCY05LqWTv_KSkWxs2xd4EDw",
-    whatsapp: "https://wa.me/5589994042351",
-    email: "eltobrgs@gmail.com",
+    linkedin: "https://www.linkedin.com/in/elto-borges-5b90962a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    instagram: "https://www.instagram.com/eltobrgs/",
+    youtube: "https://www.youtube.com/@eltobrgs",
+    whatsapp: "https://wa.link/w6d9rf",
+    email: "mailto:eltobrgs@gmail.com",
   },
   hero: {
     title: "Hi!! I'm Elto Borges 🇧🇷💻",
@@ -79,22 +79,22 @@ export const siteConfig = {
     },
     {
       name: "WhatsApp",
-      url: "https://wa.me/5589994042351",
+      url: "https://wa.link/w6d9rf",
       icon: "MessageSquare"
     },
     {
       name: "Instagram",
-      url: "https://instagram.com/eltobrgs",
+      url: "https://www.instagram.com/eltobrgs/",
       icon: "Instagram"
     },
     {
       name: "YouTube",
-      url: "https://www.youtube.com/channel/UCY05LqWTv_KSkWxs2xd4EDw",
+      url: "https://www.youtube.com/@eltobrgs",
       icon: "Youtube"
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/elto-borges-5b90962a8/",
+      url: "https://www.linkedin.com/in/elto-borges-5b90962a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       icon: "Linkedin"
     },
     {
