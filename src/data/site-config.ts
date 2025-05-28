@@ -42,7 +42,7 @@ export const siteConfig = {
     },
     {
       category: "Outros",
-      technologies: ["Arduino", "Raspberry Pi", "IA", "Automação", "JWT", "Git"]
+      technologies: ["Arduino", "Raspberry Pi", "IA", "Automação", "JWT", "Git", "Apache Cordova"]
     }
   ] as TechCategory[],
   projects: [
@@ -114,6 +114,15 @@ export const siteConfig = {
       liveUrl: "https://eltobrgs.github.io/SistemaDigestivoInterativo/",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "digestive system anatomy",
+      isCollection: false,
+    },
+    {
+      name: "Balança Luma App (Cordova)",
+      description: "Aplicativo mobile desenvolvido com HTML, CSS, JavaScript e Apache Cordova, utilizando plugins Cordova para funcionalidades mobile.",
+      technologies: ["HTML", "CSS", "JavaScript", "Apache Cordova"],
+      repoUrl: "https://github.com/eltobrgs/LumakCordovaApps/tree/main/BalancaLumaApp",
+      imageUrl: "https://placehold.co/600x400.png",
+      imageHint: "mobile app cordova",
       isCollection: false,
     }
   ] as Project[],
