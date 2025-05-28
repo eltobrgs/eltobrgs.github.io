@@ -56,7 +56,7 @@ export const siteConfig = {
     },
     {
       name: "RFSmart Platform",
-      description: "Plataforma de cursos online com frontend moderno (React, TypeScript, Vite) e backend robusto (Node.js, Express, Prisma). Repositórios: Frontend - https://github.com/eltobrgs/FrontEnd-RFSmartReact, Backend - https://github.com/eltobrgs/BackEnd-RFSmart.",
+      description: "Plataforma de cursos online com frontend moderno (React, TypeScript, Vite) e backend robusto (Node.js, Express, Prisma).",
       technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router DOM", "Framer Motion", "Node.js", "Express", "Prisma", "JWT"],
       frontendRepoUrl: "https://github.com/eltobrgs/FrontEnd-RFSmartReact",
       backendRepoUrl: "https://github.com/eltobrgs/BackEnd-RFSmart",
@@ -80,7 +80,6 @@ export const siteConfig = {
       repoUrl: "https://github.com/eltobrgs/SpringBoot-sistemabiblioteca",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "library management system",
-      isCollection: false,
     },
     {
       name: "MedicSystem - Gerenciador de Clínica",
@@ -90,21 +89,6 @@ export const siteConfig = {
       backendRepoUrl: "https://github.com/eltobrgs/BackEnd-MedicSystem",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "clinic management app",
-      isCollection: true,
-      collectionTitle: "Repositórios e Componentes do MedicSystem",
-      collectionItems: [
-        {
-          name: "Frontend (React, TypeScript)",
-          description: "Interface do usuário para o MedicSystem, desenvolvida com React, TypeScript e Vite.",
-          repoUrl: "https://github.com/eltobrgs/FrontEnd-MedicSystem"
-        },
-        {
-          name: "Backend (Node.js, Prisma)",
-          description: "API RESTful e lógica de negócios para o MedicSystem, utilizando Node.js, Express e Prisma.",
-          repoUrl: "https://github.com/eltobrgs/BackEnd-MedicSystem"
-        }
-      ],
-      collectionSeeMoreText: "Explore os componentes frontend e backend do MedicSystem."
     },
     {
       name: "Explorador Interativo do Sistema Digestivo",
@@ -114,7 +98,6 @@ export const siteConfig = {
       liveUrl: "https://eltobrgs.github.io/SistemaDigestivoInterativo/",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "digestive system anatomy",
-      isCollection: false,
     },
     {
       name: "Balança Luma App (Cordova)",
@@ -123,7 +106,6 @@ export const siteConfig = {
       repoUrl: "https://github.com/eltobrgs/LumakCordovaApps/tree/main/BalancaLumaApp",
       imageUrl: "https://placehold.co/600x400.png",
       imageHint: "mobile app cordova",
-      isCollection: false,
     }
   ] as Project[],
   contactLinks: [

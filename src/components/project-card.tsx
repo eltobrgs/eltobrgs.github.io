@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Layers } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 import type { Project } from '@/types';
 import ProjectDetailsModal from './project-details-modal';
 import { useState } from 'react';
@@ -21,18 +21,16 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
-    if (project.isCollection) {
-      setIsModalOpen(true);
-    }
+    setIsModalOpen(true);
   };
 
   const cardContent = (
     <Card
-      className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-      onClick={project.isCollection ? handleOpenModal : undefined}
-      role={project.isCollection ? "button" : undefined}
-      tabIndex={project.isCollection ? 0 : undefined}
-      onKeyDown={project.isCollection ? (e) => (e.key === 'Enter' || e.key === ' ') && handleOpenModal() : undefined}
+      className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+      onClick={handleOpenModal}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && handleOpenModal()}
     >
       <div className="relative w-full h-48 sm:h-56">
         <Image
@@ -42,11 +40,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           objectFit="cover"
           data-ai-hint={project.imageHint || "project code"}
         />
-         {project.isCollection && (
-          <div className="absolute top-2 right-2 bg-primary text-primary-foreground px-2 py-1 text-xs font-semibold rounded-md shadow-md">
-            Coleção
-          </div>
-        )}
       </div>
       <CardHeader>
         <CardTitle className="text-xl font-semibold">{project.name}</CardTitle>
@@ -55,14 +48,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <div className="mb-4">
+        <div className="mb-1">
           <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-1">Tecnologias:</h4>
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech) => (
+          <div className="flex flex-wrap gap-1">
+            {project.technologies.slice(0, 4).map((tech) => ( // Show limited techs, full list in modal
               <Badge key={tech} variant="secondary" className="text-xs">
                 {tech}
               </Badge>
             ))}
+            {project.technologies.length > 4 && (
+              <Badge variant="outline" className="text-xs">
+                + {project.technologies.length - 4} mais
+              </Badge>
+            )}
           </div>
         </div>
       </CardContent>
@@ -87,37 +85,38 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         ) : project.repoUrl ? (
           <Link href={project.repoUrl} passHref legacyBehavior>
             <a target="_blank" rel="noopener noreferrer" className="w-full" onClick={(e) => e.stopPropagation()}>
-              <Button variant="outline" className="w-full">
-                <Github className="mr-2 h-4 w-4" /> Ver Repositório
+              <Button variant="outline" className="w-full col-span-1"> {/* Adjusted col-span */}
+                <Github className="mr-2 h-4 w-4" /> Repositório
               </Button>
             </a>
           </Link>
         ) : (
-          <Button variant="outline" className="w-full" disabled>
-            <Github className="mr-2 h-4 w-4" /> Repositório Indisponível
+          <Button variant="outline" className="w-full col-span-1" disabled> {/* Adjusted col-span */}
+            <Github className="mr-2 h-4 w-4" /> Indisponível
           </Button>
         )}
 
-        {/* Second button: Only shown if not using dedicated frontend/backend buttons */}
-        {!(project.frontendRepoUrl && project.backendRepoUrl) && (
-          project.isCollection ? (
-            <Button className="w-full" onClick={(e) => { e.stopPropagation(); handleOpenModal(); }}>
-              <Layers className="mr-2 h-4 w-4" /> Ver Detalhes
-            </Button>
-          ) : project.liveUrl ? (
+        {/* Second button: Live URL or fills the space if only one repo button */}
+        {project.liveUrl ? (
             <Link href={project.liveUrl} passHref legacyBehavior>
               <a target="_blank" rel="noopener noreferrer" className="w-full" onClick={(e) => e.stopPropagation()}>
-                <Button className="w-full">
+                <Button className="w-full col-span-1">  {/* Ensure it takes one column */}
                   <ExternalLink className="mr-2 h-4 w-4" /> Ver Online
                 </Button>
               </a>
             </Link>
           ) : (
-            <Button className="w-full" disabled>
-              <ExternalLink className="mr-2 h-4 w-4" /> Sem Link
-            </Button>
+            (!(project.frontendRepoUrl && project.backendRepoUrl) && project.repoUrl) ? (
+                <span className="col-span-1"></span> // Empty span to maintain grid structure if only one repo button and no live URL
+            ) : (project.frontendRepoUrl && project.backendRepoUrl) ? (
+                 <span className="col-span-1"></span> // Empty span if two repo buttons and no live URL
+            ) : (
+                <Button className="w-full col-span-1" disabled> {/* Ensure it takes one column */}
+                    <ExternalLink className="mr-2 h-4 w-4" /> Sem Link
+                </Button>
+            )
           )
-        )}
+        }
       </CardFooter>
     </Card>
   );
@@ -131,13 +130,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       >
         {cardContent}
       </motion.div>
-      {project.isCollection && (
-        <ProjectDetailsModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          project={project}
-        />
-      )}
+      <ProjectDetailsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        project={project}
+      />
     </>
   );
 }
