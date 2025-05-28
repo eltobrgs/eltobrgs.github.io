@@ -71,13 +71,15 @@ export default function ProjectDetailsModal({ isOpen, onClose, project }: Projec
               </p>
             )}
           </div>
-          <Link href={project.repoUrl} passHref legacyBehavior>
-            <a target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="w-full sm:w-auto">
-                <Github className="mr-2 h-4 w-4" /> Repositório Principal
-              </Button>
-            </a>
-          </Link>
+          {project.repoUrl && (
+            <Link href={project.repoUrl} passHref legacyBehavior>
+              <a target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="w-full sm:w-auto">
+                  <Github className="mr-2 h-4 w-4" /> Repositório Principal
+                </Button>
+              </a>
+            </Link>
+          )}
           <Button variant="secondary" onClick={onClose} className="w-full sm:w-auto mt-2 sm:mt-0">
             Fechar
           </Button>
@@ -86,3 +88,4 @@ export default function ProjectDetailsModal({ isOpen, onClose, project }: Projec
     </Dialog>
   );
 }
+
