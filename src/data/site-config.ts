@@ -59,6 +59,18 @@ export const siteConfig = {
         "/images/Ugym/Ugym3.png",
         "/images/Ugym/Ugym4.png",
         "/images/Ugym/Ugym5.png",
+        "/images/Ugym/Ugym6.png",
+        "/images/Ugym/Ugym7.png",
+        "/images/Ugym/Ugym8.png",
+        "/images/Ugym/Ugym9.png",
+        "/images/Ugym/Ugym10.png",
+        "/images/Ugym/Ugym11.png",
+        "/images/Ugym/Ugym12.png",
+        "/images/Ugym/Ugym13.png",
+        "/images/Ugym/Ugym14.png",
+        "/images/Ugym/Ugym15.png",
+        "/images/Ugym/Ugym16.png",
+        "/images/Ugym/Ugym17.png",
       ]
     },
     {
