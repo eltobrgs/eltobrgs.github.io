@@ -17,6 +17,7 @@ export interface Project {
   liveUrl?: string;
   imageUrl: string;
   imageHint?: string;
+  images?: string[]; // Array of additional project images for the slider
 
   // Para coleções de projetos que abrem um modal
   isCollection?: boolean;

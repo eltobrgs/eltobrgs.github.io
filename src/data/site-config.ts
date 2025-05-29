@@ -51,8 +51,26 @@ export const siteConfig = {
       description: "Aplicativo de fitness completo (React, TypeScript) para Alunos, Personal Trainers e Academias. Backend com Prisma, Express, políticas de segurança, hash de senha e token JWT.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Prisma", "Express", "Node.js", "JWT"],
       liveUrl: "https://ugym-react.vercel.app",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "fitness app"
+      imageUrl: "/images/Ugym/Ugym1.png",
+      imageHint: "fitness app",
+      images: [
+        "/images/Ugym/Ugym2.png",
+        "/images/Ugym/Ugym3.png",
+        "/images/Ugym/Ugym4.png",
+        "/images/Ugym/Ugym5.png",
+        "/images/Ugym/Ugym6.png",
+        "/images/Ugym/Ugym7.png",
+        "/images/Ugym/Ugym8.png",
+        "/images/Ugym/Ugym9.png",
+        "/images/Ugym/Ugym10.png",
+        "/images/Ugym/Ugym11.png",
+        "/images/Ugym/Ugym12.png",
+        "/images/Ugym/Ugym13.png",
+        "/images/Ugym/Ugym14.png",
+        "/images/Ugym/Ugym15.png",
+        "/images/Ugym/Ugym16.png",
+        "/images/Ugym/Ugym17.png"
+      ]
     },
     {
       name: "RFSmart Platform",
@@ -61,8 +79,19 @@ export const siteConfig = {
       frontendRepoUrl: "https://github.com/eltobrgs/FrontEnd-RFSmartReact",
       backendRepoUrl: "https://github.com/eltobrgs/BackEnd-RFSmart",
       liveUrl: "https://front-end-rf-smart-react.vercel.app",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "e-learning platform"
+      imageUrl: "/images/RF/RF1.png",
+      imageHint: "e-learning platform",
+      images: [
+        "/images/RF/RF2.png",
+        "/images/RF/RF3.png",
+        "/images/RF/RF4.png",
+        "/images/RF/RF5.png",
+        "/images/RF/RF6.png",
+        "/images/RF/RF7.png",
+        "/images/RF/RF8.png",
+        "/images/RF/RF9.png",
+        "/images/RF/RF10.png"
+      ]
     },
     {
       name: "UGym Landing Page",
@@ -70,16 +99,26 @@ export const siteConfig = {
       technologies: ["Next.js", "Tailwind CSS"],
       repoUrl: "https://github.com/eltobrgs/LandingPageUgym",
       liveUrl: "https://eltobrgs.github.io/LandingPageUgym/",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "website landing page"
+      imageUrl: "/images/UgymLandingPage/landingugym1.png",
+      imageHint: "website landing page",
+      images: [
+        "/images/UgymLandingPage/landingugym2.png",
+        "/images/UgymLandingPage/landingugym3.png",
+        "/images/UgymLandingPage/landingugym4.png"
+      ]
     },
     {
       name: "Sistema de Gerenciamento de Biblioteca",
       description: "Sistema de gerenciamento de biblioteca com frontend em HTML, Bootstrap CSS, e backend com Spring Boot, conectado ao banco de dados MongoDB.",
       technologies: ["Java", "Spring Boot", "MongoDB", "Thymeleaf", "HTML", "Bootstrap CSS", "Maven"],
       repoUrl: "https://github.com/eltobrgs/SpringBoot-sistemabiblioteca",
-      imageUrl: "https://placehold.co/600x400.png",
+      imageUrl: "/images/biblioteca/biblioteca1.png",
       imageHint: "library management system",
+      images: [
+        "/images/biblioteca/biblioteca2.png",
+        "/images/biblioteca/biblioteca3.png",
+        "/images/biblioteca/biblioteca4.png"
+      ],
     },
     {
       name: "MedicSystem - Gerenciador de Clínica",
@@ -87,8 +126,13 @@ export const siteConfig = {
       technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "JWT", "Framer Motion"],
       frontendRepoUrl: "https://github.com/eltobrgs/FrontEnd-MedicSystem",
       backendRepoUrl: "https://github.com/eltobrgs/BackEnd-MedicSystem",
-      imageUrl: "https://placehold.co/600x400.png",
+      imageUrl: "/images/medicsys/medicsys1.png",
       imageHint: "clinic management app",
+      images: [
+        "/images/medicsys/medicsys2.png",
+        "/images/medicsys/medicsys3.png",
+        "/images/medicsys/medicsys4.png"
+      ],
     },
     {
       name: "Explorador Interativo do Sistema Digestivo",
@@ -96,17 +140,14 @@ export const siteConfig = {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       repoUrl: "https://github.com/eltobrgs/SistemaDigestivoInterativo",
       liveUrl: "https://eltobrgs.github.io/SistemaDigestivoInterativo/",
-      imageUrl: "https://placehold.co/600x400.png",
+      imageUrl: "/images/SistemaDigestorio/SistemaDigestorio1.png",
       imageHint: "digestive system anatomy",
+      images: [
+        "/images/SistemaDigestorio/SistemaDigestorio2.png",
+        "/images/SistemaDigestorio/SistemaDigestorio3.png",
+        "/images/SistemaDigestorio/SistemaDigestorio4.png"
+      ],
     },
-    {
-      name: "Balança Luma App (Cordova)",
-      description: "Aplicativo mobile desenvolvido com HTML, CSS, JavaScript e Apache Cordova, utilizando plugins Cordova para funcionalidades mobile.",
-      technologies: ["HTML", "CSS", "JavaScript", "Apache Cordova"],
-      repoUrl: "https://github.com/eltobrgs/LumakCordovaApps/tree/main/BalancaLumaApp",
-      imageUrl: "https://placehold.co/600x400.png",
-      imageHint: "mobile app cordova",
-    }
   ] as Project[],
   contactLinks: [
     {

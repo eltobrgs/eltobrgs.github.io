@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
 import type { Project } from '@/types';
 import ProjectDetailsModal from './project-details-modal';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface ProjectCardProps {
   project: Project;
@@ -19,10 +19,41 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const allImages = project.images ? [project.imageUrl, ...project.images] : [project.imageUrl];
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % allImages.length);
+  };
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    const startSlideshow = () => {
+      timer = setInterval(nextImage, 2000); // Change image every 2 seconds when hovering
+    };
+    const stopSlideshow = () => {
+      if (timer) clearInterval(timer);
+      setCurrentImageIndex(0); // Reset to first image when not hovering
+    };
+
+    const imageContainer = document.getElementById(`project-image-${project.name}`);
+    if (imageContainer) {
+      imageContainer.addEventListener('mouseenter', startSlideshow);
+      imageContainer.addEventListener('mouseleave', stopSlideshow);
+    }
+
+    return () => {
+      if (timer) clearInterval(timer);
+      if (imageContainer) {
+        imageContainer.removeEventListener('mouseenter', startSlideshow);
+        imageContainer.removeEventListener('mouseleave', stopSlideshow);
+      }
+    };
+  }, [project.name, allImages.length]);
 
   const cardContent = (
     <Card
@@ -32,14 +63,21 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       tabIndex={0}
       onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && handleOpenModal()}
     >
-      <div className="relative w-full h-48 sm:h-56">
-        <Image
-          src={project.imageUrl}
-          alt={project.name}
-          layout="fill"
-          objectFit="cover"
-          data-ai-hint={project.imageHint || "project code"}
-        />
+      <div 
+        id={`project-image-${project.name}`}
+        className="relative w-full h-48 sm:h-56 overflow-hidden"
+      >
+        {allImages.map((image, index) => (
+          <Image
+            key={image}
+            src={image}
+            alt={`${project.name} - Image ${index + 1}`}
+            layout="fill"
+            objectFit="cover"
+            data-ai-hint={project.imageHint || "project code"}
+            className={`absolute top-0 left-0 transition-opacity duration-500 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
+          />
+        ))}
       </div>
       <CardHeader>
         <CardTitle className="text-xl font-semibold">{project.name}</CardTitle>

@@ -1,6 +1,5 @@
 
 "use client";
-
 import { siteConfig } from '@/data/site-config';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -22,8 +21,8 @@ export default function HeroSection() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Image
-              src="https://placehold.co/300x300.png"
+            <Image              
+              src="/images/avatar.png"
               alt="Elto Borges"
               width={300}
               height={300}
