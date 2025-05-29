@@ -51,25 +51,14 @@ export const siteConfig = {
       description: "Aplicativo de fitness completo (React, TypeScript) para Alunos, Personal Trainers e Academias. Backend com Prisma, Express, políticas de segurança, hash de senha e token JWT.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Prisma", "Express", "Node.js", "JWT"],
       liveUrl: "https://ugym-react.vercel.app",
-      imageUrl: "/images/Ugym/Ugym1.png",
+      imageUrl: "/images/Ugym/Ugym.png",
       imageHint: "fitness app",
       images: [
+        "/images/Ugym/Ugym1.png",
         "/images/Ugym/Ugym2.png",
         "/images/Ugym/Ugym3.png",
         "/images/Ugym/Ugym4.png",
         "/images/Ugym/Ugym5.png",
-        "/images/Ugym/Ugym6.png",
-        "/images/Ugym/Ugym7.png",
-        "/images/Ugym/Ugym8.png",
-        "/images/Ugym/Ugym9.png",
-        "/images/Ugym/Ugym10.png",
-        "/images/Ugym/Ugym11.png",
-        "/images/Ugym/Ugym12.png",
-        "/images/Ugym/Ugym13.png",
-        "/images/Ugym/Ugym14.png",
-        "/images/Ugym/Ugym15.png",
-        "/images/Ugym/Ugym16.png",
-        "/images/Ugym/Ugym17.png"
       ]
     },
     {
